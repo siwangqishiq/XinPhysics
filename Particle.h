@@ -12,13 +12,16 @@
 #include "Vector3.h"
 #include "common.h"
 
+#define DEFAULT_DAMPING      0.995   //默认阻尼系数
+
 struct _Particle
 {
     Vector3 position;//位置
     Vector3 velocity;//速度
     Vector3 accleration;//加速度
-    real damping;//阻尼系数
+    real damping;//阻尼系数   0~1取值范围  1为无影响    0为影响最大
     real mass;//质量
+    real inverseMass;//质量倒数
 };
 
 typedef struct _Particle Particle;

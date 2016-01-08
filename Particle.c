@@ -15,6 +15,7 @@ int createPartile(Particle **pParticle)
     if(result == NULL)
         return ERROR;
     
+    result->damping = DEFAULT_DAMPING;
     *pParticle = result;
     return OK;
 }
