@@ -1,6 +1,8 @@
 #ifndef _RenderOpengl_h_
 #define _RenderOpengl_h_
 //#include <gl\glut.h>  for windows
+
+//this for OSX
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
 #include <GLUT/glut.h>

@@ -10,7 +10,12 @@
 
 int createPartile(Particle **pParticle)
 {
+    Particle *result = NULL;
+    result = (Particle *)malloc(sizeof(Particle));
+    if(result == NULL)
+        return ERROR;
     
+    *pParticle = result;
     return OK;
 }
 
