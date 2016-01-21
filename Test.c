@@ -6,7 +6,7 @@
 long lastTime = 0;
 
 void testVector()
-{
+{	
 	//Vector3 *pVec;
 	//real len = 0;
 	//
@@ -19,7 +19,6 @@ void testVector()
 	//normalize(pVec);
 	//printVector3(pVec);
 	//freeVector3(pVec);
-
 
 	Vector3 *pVec1;
 	Vector3 *pVec2;
@@ -57,19 +56,30 @@ void drawWave();
 
 void display()
 {
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	long curTime = clock();
+	printf("delta = %ld  time = %ld\n",curTime - lastTime,curTime);
+	lastTime = curTime;
 
+	//update data and logic
+	//TODO
+
+	//render 
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	//TODO update
 	//drawPoint(300,400,color);
 	//drawLine(300,400,400,500,color);
 	//drawWave();
-
+	//for(i = 0;i<10000000;i++){
+	//	sinf(i);
+	//}
 	//drawRect(200,300,100,100,color);
 	//drawCircle(300,400,100,color);
 	//drawRect(0,0,WIDTH,WIDTH,color);
+	//time = glutGet(GLUT_ELAPSED_TIME);
+	//printf("%d  \n",time);
 
-	glutSwapBuffers();
-	glutPostRedisplay();
+	glutSwapBuffers();//swap the buffer 
+	glutPostRedisplay();//redraw image on screen
 }
 
 void drawWave()

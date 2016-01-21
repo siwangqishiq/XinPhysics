@@ -1,11 +1,11 @@
 #ifndef _RenderOpengl_h_
 #define _RenderOpengl_h_
-//#include <gl\glut.h>  for windows
+#include <gl\glut.h>  for windows
 
 //this for OSX
-#include <OpenGL/gl.h>
-#include <OpenGL/glu.h>
-#include <GLUT/glut.h>
+//#include <OpenGL/gl.h>
+//#include <OpenGL/glu.h>
+//#include <GLUT/glut.h>
 
 #define WIDTH       600
 #define HEIGHT      800
